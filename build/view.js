@@ -1,0 +1,1 @@
+(()=>{let e=0;const t=document.querySelectorAll(".slide"),n=t.length;function c(e){t.forEach(((t,n)=>{t.classList.remove("active"),n===e&&t.classList.add("active")}))}function o(){e=(e+1)%n,c(e)}document.addEventListener("DOMContentLoaded",(function(){c(e),setInterval(o,5e3)}))})();

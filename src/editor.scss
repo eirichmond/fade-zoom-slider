@@ -1,0 +1,20 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-custom-block-fade-zoom-slider {
+	border: 1px dotted #f00;
+	.slider {
+		.slide {
+			opacity: 1;
+		}
+	} 
+	.components-button.is-destructive {
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		background: #ff9d9d82;
+	}
+}
