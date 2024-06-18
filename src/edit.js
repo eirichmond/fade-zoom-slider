@@ -71,8 +71,6 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				/>
 			</MediaUploadCheck>
-			{/* <div className="slider">
-				<div className="slides"> */}
 			{images.map((img, index) => (
 				<Fragment key={img.id}>
 					<div
@@ -92,8 +90,6 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 				</Fragment>
 			))}
-			{/* </div>
-			</div> */}
 		</div>
 	);
 }

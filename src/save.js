@@ -21,8 +21,6 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...useBlockProps.save()}>
-			{/* <div className="slider">
-				<div className="slides"> */}
 			{images.map((img) => (
 				<div
 					className="slide"
@@ -34,8 +32,6 @@ export default function save({ attributes }) {
 					/>
 				</div>
 			))}
-			{/* </div>
-			</div> */}
 		</div>
 	);
 }
