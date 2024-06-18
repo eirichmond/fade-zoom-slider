@@ -21,21 +21,21 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...useBlockProps.save()}>
-			<div className="slider">
-				<div className="slides">
-					{images.map((img) => (
-						<div
-							className="slide"
-							key={img.id}
-						>
-							<img
-								src={img.url}
-								alt={img.alt}
-							/>
-						</div>
-					))}
+			{/* <div className="slider">
+				<div className="slides"> */}
+			{images.map((img) => (
+				<div
+					className="slide"
+					key={img.id}
+				>
+					<img
+						src={img.url}
+						alt={img.alt}
+					/>
 				</div>
-			</div>
+			))}
+			{/* </div>
+			</div> */}
 		</div>
 	);
 }

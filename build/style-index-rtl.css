@@ -1,1 +1,40 @@
-.wp-block-custom-block-fade-zoom-slider{color:#fff}.slider{overflow:hidden;position:relative}.slider .slides{aspect-ratio:16/9;display:block;height:100%;width:100%}.slider .slide{background-color:#f0f0f0;opacity:0;overflow:hidden;transition:opacity 1s ease-in-out}.slider .slide,.slider .slide img{height:100%;position:absolute;width:100%}.slider .slide img{right:0;-o-object-fit:cover;object-fit:cover;top:0;transform:scale(1);transition:transform 20s ease}.slider .slide.active{opacity:1}.slider .slide.active img{transform:scale(1.1)}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-custom-block-fade-zoom-slider {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  position: absolute;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  transition: transform 6s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide.active img {
+  transform: scale(1.1); /* Zoom effect */
+}

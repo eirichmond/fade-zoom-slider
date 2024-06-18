@@ -6,42 +6,36 @@
  */
 
 .wp-block-custom-block-fade-zoom-slider {
-	color: #fff;
+	position: relative;
+	box-sizing: border-box;
 }
-.slider {
-    position: relative;
-    overflow: hidden;
-	.slides {
-		display: block;
-		width: 100%;
-		height: 100%;
-		aspect-ratio: 16 / 9;
-	}
-	.slide {
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		transition: opacity 1s ease-in-out;
 
-		background-color: #f0f0f0;
-		overflow: hidden;
+
+
+.slide {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+
+	background-color: #f0f0f0;
+	overflow: hidden;
+	position: absolute;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: scale(1);
+		transition: transform 6s ease;
+
 		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&.active {
+		opacity: 1;
 		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transform: scale(1);
-			transition: transform 20s ease;
-
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		&.active {
-			opacity: 1;
-			img {
-				transform: scale(1.1); /* Zoom effect */
-			}
+			transform: scale(1.1); /* Zoom effect */
 		}
 	}
 }

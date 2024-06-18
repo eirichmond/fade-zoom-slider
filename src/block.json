@@ -9,8 +9,17 @@
 	"description": "A simple fade zoom slider gallery for images.",
 	"example": {},
 	"supports": {
+		"html": false,
 		"align": true,
-		"html": false
+		"dimensions": {
+			"aspectRatio": true
+		},
+		"spacing": {
+			"margin": [
+				"top",
+				"bottom"
+			]
+		}
 	},
 	"attributes": {
 		"images": {

@@ -71,29 +71,29 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				/>
 			</MediaUploadCheck>
-			<div className="slider">
-				<div className="slides">
-					{images.map((img, index) => (
-						<Fragment key={img.id}>
-							<div
-								className="slide"
-								key={img.id}
-							>
-								<img
-									src={img.url}
-									alt={img.alt}
-								/>
-								<Button
-									isDestructive
-									onClick={() => removeImage(index)}
-								>
-									Remove
-								</Button>
-							</div>
-						</Fragment>
-					))}
-				</div>
-			</div>
+			{/* <div className="slider">
+				<div className="slides"> */}
+			{images.map((img, index) => (
+				<Fragment key={img.id}>
+					<div
+						className="slide"
+						key={img.id}
+					>
+						<img
+							src={img.url}
+							alt={img.alt}
+						/>
+						<Button
+							isDestructive
+							onClick={() => removeImage(index)}
+						>
+							Remove
+						</Button>
+					</div>
+				</Fragment>
+			))}
+			{/* </div>
+			</div> */}
 		</div>
 	);
 }
