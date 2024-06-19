@@ -9,6 +9,12 @@
 	.slide {
 		opacity: 1;
 	}
+	.components-button.is-primary {
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		z-index: 99;
+	}
 	.components-button.is-destructive {
 		position: absolute;
 		bottom: 1em;

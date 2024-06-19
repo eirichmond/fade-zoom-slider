@@ -1,1 +1,26 @@
-.wp-block-custom-block-fade-zoom-slider{border:1px dotted red}.wp-block-custom-block-fade-zoom-slider .slide{opacity:1}.wp-block-custom-block-fade-zoom-slider .components-button.is-destructive{background:hsla(0,100%,81%,.51);bottom:1em;position:absolute;left:1em}
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-custom-block-fade-zoom-slider {
+  border: 1px dotted #f00;
+}
+.wp-block-custom-block-fade-zoom-slider .slide {
+  opacity: 1;
+}
+.wp-block-custom-block-fade-zoom-slider .components-button.is-primary {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 99;
+}
+.wp-block-custom-block-fade-zoom-slider .components-button.is-destructive {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background: rgba(255, 157, 157, 0.5098039216);
+}
