@@ -57,6 +57,7 @@ export default function Edit({ attributes, setAttributes }) {
 					value={images.map((img) => img.id)}
 					render={ ( { open } ) => (
 						<Button
+							className="add-fade-slider-img"
 							variant="primary"
 							onClick={ open }>Open Media Library</Button>
 					) }

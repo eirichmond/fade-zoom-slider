@@ -82,6 +82,7 @@ function Edit({
     render: ({
       open
     }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+      className: "add-fade-slider-img",
       variant: "primary",
       onClick: open
     }, "Open Media Library")

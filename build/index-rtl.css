@@ -12,6 +12,11 @@
 .wp-block-elliottrichmond-fade-zoom-slider .slide {
   opacity: 1;
 }
+.wp-block-elliottrichmond-fade-zoom-slider .add-fade-slider-img.is-destructive {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
 .wp-block-elliottrichmond-fade-zoom-slider .remove-fade-slider-img.is-destructive {
   position: absolute;
   bottom: 1em;
