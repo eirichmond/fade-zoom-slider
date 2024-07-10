@@ -4,21 +4,15 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-custom-block-fade-zoom-slider {
+.wp-block-elliottrichmond-fade-zoom-slider {
 	border: 1px dotted #f00;
 	.slide {
 		opacity: 1;
 	}
-	.components-button.is-primary {
-		position: absolute;
-		top: 1em;
-		left: 1em;
-		z-index: 99;
-	}
-	.components-button.is-destructive {
-		position: absolute;
+	.remove-fade-slider-img.is-destructive {
+		position:absolute;
 		bottom: 1em;
 		right: 1em;
-		background: #ff9d9d82;
+		background: rgba(248, 200, 200, 0.55);
 	}
 }

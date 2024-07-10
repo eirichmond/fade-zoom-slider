@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -17,19 +17,12 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 export default function save({ attributes }) {
 	const { images } = attributes;
-	const blockProps = useBlockProps.save();
 
 	return (
-		<div {...useBlockProps.save()}>
-			{images.map((img) => (
-				<div
-					className="slide"
-					key={img.id}
-				>
-					<img
-						src={img.url}
-						alt={img.alt}
-					/>
+		<div { ...useBlockProps.save() }>
+			{images.map((img, index) => (
+				<div className="slide" key={index}>
+					<img src={img.url} alt={img.alt} />
 				</div>
 			))}
 		</div>

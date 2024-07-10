@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from "@wordpress/i18n";
+import { __ } from '@wordpress/i18n';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,14 +11,9 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import {
-	useBlockProps,
-	MediaUpload,
-	MediaUploadCheck,
-} from "@wordpress/block-editor";
+import { useBlockProps, MediaUpload, MediaUploadCheck, BlockControls, BlockVerticalAlignmentControl } from '@wordpress/block-editor';
 
-import { Button } from "@wordpress/components";
-import { Fragment } from "@wordpress/element";
+import { Button } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -26,7 +21,7 @@ import { Fragment } from "@wordpress/element";
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import "./editor.scss";
+import './editor.scss';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -37,59 +32,45 @@ import "./editor.scss";
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-	const { images } = attributes;
 
-	const onSelectImages = (newImages) => {
-		setAttributes({ images: newImages });
-	};
+	const { images } = attributes
 
-	const removeImage = (index) => {
+	const ALLOWED_MEDIA_TYPES = ["image"]
+
+	const removeImage = ( index ) => {
 		const newImages = images.filter((img, i) => i !== index);
-		setAttributes({ images: newImages });
-	};
+		setAttributes({images: newImages});
+	}
 
-	const blockProps = useBlockProps();
 
 	return (
-		<div {...useBlockProps()}>
+		<div { ...useBlockProps() }>
 			<MediaUploadCheck>
 				<MediaUpload
-					onSelect={onSelectImages}
-					allowedTypes={["image"]}
+					onSelect={ ( media ) =>
+						setAttributes( { images: media } )
+					}
+					allowedTypes={ ALLOWED_MEDIA_TYPES }
 					multiple
+					addToGallery
 					gallery
 					value={images.map((img) => img.id)}
-					render={({ open }) => (
+					render={ ( { open } ) => (
 						<Button
-							onClick={open}
-							isPrimary
-						>
-							{images.length === 0
-								? "Upload Images"
-								: "Edit Images"}
-						</Button>
-					)}
+							variant="primary"
+							onClick={ open }>Open Media Library</Button>
+					) }
 				/>
 			</MediaUploadCheck>
 			{images.map((img, index) => (
-				<Fragment key={img.id}>
-					<div
-						className="slide"
-						key={img.id}
-					>
-						<img
-							src={img.url}
-							alt={img.alt}
-						/>
-						<Button
-							isDestructive
-							onClick={() => removeImage(index)}
-						>
-							Remove
-						</Button>
-					</div>
-				</Fragment>
+				<div className="slide" key={index}>
+					<img src={img.url} alt={img.alt}  />
+					<Button className="remove-fade-slider-img" isDestructive onClick={() => removeImage(index)}>
+						Remove
+					</Button>
+				</div>
 			))}
 		</div>
 	);
 }
+
