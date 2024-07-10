@@ -6,23 +6,17 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-custom-block-fade-zoom-slider {
+.wp-block-elliottrichmond-fade-zoom-slider {
   border: 1px dotted #f00;
 }
-.wp-block-custom-block-fade-zoom-slider .slide {
+.wp-block-elliottrichmond-fade-zoom-slider .slide {
   opacity: 1;
 }
-.wp-block-custom-block-fade-zoom-slider .components-button.is-primary {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  z-index: 99;
-}
-.wp-block-custom-block-fade-zoom-slider .components-button.is-destructive {
+.wp-block-elliottrichmond-fade-zoom-slider .remove-fade-slider-img.is-destructive {
   position: absolute;
   bottom: 1em;
   right: 1em;
-  background: rgba(255, 157, 157, 0.5098039216);
+  background: rgba(248, 200, 200, 0.55);
 }
 
 /*# sourceMappingURL=index.css.map*/

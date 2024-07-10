@@ -1,24 +1,19 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "custom-block/fade-zoom-slider",
+  "name": "elliottrichmond/fade-zoom-slider",
   "version": "0.1.0",
   "title": "Fade Zoom Slider",
-  "category": "media",
-  "icon": "slides",
-  "description": "A simple fade zoom slider gallery for images.",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {
     "html": false,
     "align": true,
     "dimensions": {
-      "aspectRatio": true
-    },
-    "spacing": {
-      "margin": [
-        "top",
-        "bottom"
-      ]
+      "aspectRatio": true,
+      "minHeight": true
     }
   },
   "attributes": {
